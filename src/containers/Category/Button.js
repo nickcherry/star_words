@@ -8,5 +8,5 @@ export default styled.div`
   color: ${ WHITE };
   cursor: pointer;
   font-size: 12px;
-  position: fixed;
+  position: absolute;
 `;

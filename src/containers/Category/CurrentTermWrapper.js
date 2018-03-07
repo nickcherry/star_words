@@ -8,7 +8,7 @@ export default styled.div`
   cursor: pointer;
   font-size: 140px;
   left: 0;
-  position: fixed;
+  position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-60%);

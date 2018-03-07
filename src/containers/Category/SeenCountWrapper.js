@@ -8,7 +8,7 @@ export default styled.div`
   color: ${ WHITE };
   font-size: 12px;
   left: 0;
-  position: fixed;
+  position: absolute;
   right: 0;
 }
 `;

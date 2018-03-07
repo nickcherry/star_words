@@ -20,7 +20,7 @@ export default styled.div`
   font-size: 16px;
   left: 50%;
   opacity: 0;
-  position: fixed;
+  position: absolute;
   transform: translateX(-50%);
 
   a {

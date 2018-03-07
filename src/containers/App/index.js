@@ -10,13 +10,14 @@ import Category from '../Category';
 import HomeButton from '../HomeButton';
 import Intro from '../Intro';
 import SoundToggle from '../SoundToggle';
+import StarField from '../StarField';
 
 // Define Component
 class App extends React.PureComponent {
   render() {
     return (
       <Wrapper>
-        <SoundToggle />
+        <Route path="/" component={SoundToggle} />
         <Route path='/categories' component={HomeButton} />
         <Switch>
           <Route exact path='/' component={Intro} />
@@ -24,6 +25,7 @@ class App extends React.PureComponent {
           <Route path='/categories/:categoryId' component={Category} />
           <Redirect to="/" />
         </Switch>
+        <Route path="/" component={StarField} />
       </Wrapper>
     );
   }
