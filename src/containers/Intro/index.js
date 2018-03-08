@@ -3,6 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import StartButtonWrapper from './StartButtonWrapper';
+import TitleTextWrapper from './TitleTextWrapper';
 import TitleWrapper from './TitleWrapper';
 import Wrapper from './Wrapper';
 
@@ -11,9 +12,11 @@ class Intro extends React.PureComponent {
   render() {
     return (
       <Wrapper>
-        <TitleWrapper>Star<br />Words</TitleWrapper>
+        <TitleWrapper>
+          <TitleTextWrapper>Star<br />Words</TitleTextWrapper>
+        </TitleWrapper>
         <StartButtonWrapper>
-          <Link to="/categories">Click to Begin</Link>
+          <Link to="/categories">CLICK TO BEGIN</Link>
         </StartButtonWrapper>
       </Wrapper>
     );

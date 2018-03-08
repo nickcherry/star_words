@@ -15,9 +15,14 @@ injectGlobal`
     font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
     font-size: 18px;
     font-weight: normal;
+    height: 100%;
     letter-spacing: 0.0075em;
     margin: 0;
     padding: 0;
+  }
+
+  body > .container, #app {
+    height: 100%;
   }
 
   a {

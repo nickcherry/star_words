@@ -1,27 +1,29 @@
 // Import Dependencies
 import React from 'react';
 import { connect } from 'react-redux';
+import Isvg from 'react-inlinesvg';
 
 import { getSoundEnabled } from '../../selectors/sound';
 import { setSoundEnabled } from '../../actions/sound';
 
-import TextWrapper from './TextWrapper';
+import soundDisabledIcon from '../../assets/icons/sound_disabled.svg';
+import soundEnabledIcon from '../../assets/icons/sound_enabled.svg';
+
 import Wrapper from './Wrapper';
 
 // Define Component
 class SoundToggle extends React.PureComponent {
   render() {
     return (
-      <Wrapper>
-        { this.getText() }
+      <Wrapper onClick={ this.toggle }>
+        { this.getIcon() }
         { this.getAudioTag() }
       </Wrapper>
     );
   }
 
-  getText() {
-    const text = this.props.soundEnabled ? 'Disable Sound' : 'Enable Sound';
-    return <TextWrapper onClick={ this.toggle }>{ text }</TextWrapper>;
+  getIcon() {
+    return this.props.soundEnabled ? <Isvg src={ soundEnabledIcon } /> : <Isvg src={ soundDisabledIcon } />;
   }
 
   getAudioTag() {
@@ -29,6 +31,7 @@ class SoundToggle extends React.PureComponent {
   }
 
   toggle = () => {
+    console.log('here')
     this.props.setSoundEnabled(!this.props.soundEnabled);
   }
 }

@@ -1,22 +1,24 @@
 // Import Dependencies
 import styled from 'styled-components';
+import { WHITE } from '../../settings/colors';
 
 // Export Styled Component
 export default styled.div`
   cursor: pointer;
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 9px;
+  height: 24px;
+  opacity: 0.6;
   position: absolute;
-  left: 12px;
-  top: 8px;
-  user-select: none;
+  left: 8px;
+  top: 4px;
+  width: 24px;
   z-index: 99999;
 
-  a {
-    color: rgba(255, 255, 255, 0.7);
+  svg {
+    fill: ${ WHITE };
+    stroke: ${ WHITE };
   }
 
-  &:hover a {
-    color: rgba(255, 255, 255, 1);
+  &:hover {
+    opacity: 0.9;
   }
 `;

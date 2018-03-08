@@ -14,10 +14,9 @@ const move = keyframes`
 
 // Export Styled Component
 export default styled.div`
-  animation-duration: 50s;
+  animation-direction: forwards;
   animation-name: ${ move };
   animation-iteration-count: infinite;
-  animation-direction: forwards;
 
   border-radius: 50%;
   background: ${ WHITE };

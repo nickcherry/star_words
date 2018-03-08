@@ -1,9 +1,10 @@
 // Import Dependencies
 import styled from 'styled-components';
 
-// Export Styled Component
+// Export styled component
 export default styled.div`
+  height: 100%;
+  overflow: hidden;
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  z-index: 10;
 `;

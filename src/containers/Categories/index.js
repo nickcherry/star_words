@@ -5,12 +5,22 @@ import { Link } from 'react-router-dom';
 
 import { getCategories } from '../../selectors/categories';
 import CategoryWrapper from './CategoryWrapper';
+import HeadingWrapper from './HeadingWrapper';
 import Wrapper from './Wrapper';
 
 // Define Component
 class Categories extends React.PureComponent {
   render() {
-    return <Wrapper>{ this.getCategories() }</Wrapper>;
+    return (
+      <Wrapper>
+        { this.getHeading() }
+        { this.getCategories() }
+      </Wrapper>
+    );
+  }
+
+  getHeading() {
+    return <HeadingWrapper>FIRST CHOOSE A CATEGORY, YOU MUST.</HeadingWrapper>;
   }
 
   getCategories() {

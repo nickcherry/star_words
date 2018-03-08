@@ -18,17 +18,19 @@ class StarField extends React.PureComponent {
 
   getStars() {
     const stars = [];
-
     for (let i = 0; i < 1000; i++) {
       const diameter = `${ randWithinRange(1, 4) }px`;
       const style = {
         left: `${ randWithinRange(-10, 110) }%`,
-        top: `${ randWithinRange(-50, 300) }%`,
-        opacity: `${ randWithinRange(0.3, 0.7) }`,
+        top: `${ randWithinRange(-100, 300) }%`,
         width: diameter,
         height: diameter,
+        animationDelay: `${ randWithinRange(0, 5) }s`,
+        animationDuration: `${ randWithinRange(65, 74) }s`
       };
-      stars.push(<StarWrapper key={ i } style={ style } />);
+      stars.push(
+        <StarWrapper key={ i } style={ style } />
+      );
     }
     return stars;
   }

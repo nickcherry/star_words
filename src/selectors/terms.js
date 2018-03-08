@@ -21,21 +21,22 @@ export const getTermIndex = (term) => {
   );
 }
 
-export const getTermsByCategory = (category) => {
+export const getActiveTermsByCategory = (category, maxSeenCount) => {
   return createSelector(
     getTerms,
     (terms) => {
       const categoryId = category.get('id');
       return terms.filter((term) => {
-        return term.get('categories').find((category) => category === categoryId);
+        return term.get(SEEN_COUNT) < maxSeenCount &&
+          term.get('categories').find((category) => category === categoryId);
       });
     },
   );
 };
 
-export const getSortedTermsByCategory = (category) => {
+export const getSortedActiveTermsByCategory = (category, maxSeenCount) => {
   return createSelector(
-    getTermsByCategory(category),
+    getActiveTermsByCategory(category, maxSeenCount),
     (terms) => {
       return terms.sort((a, b) => {
         return a.get(PRIORITY) - b.get(PRIORITY) || a.get(SEEN_COUNT) - b.get(SEEN_COUNT);
@@ -44,9 +45,9 @@ export const getSortedTermsByCategory = (category) => {
   );
 };
 
-export const getNextTermForCategory = (category) => {
+export const getNextActiveTermForCategory = (category, maxSeenCount) => {
   return createSelector(
-    getSortedTermsByCategory(category),
+    getSortedActiveTermsByCategory(category, maxSeenCount),
     (sortedTerms) => sortedTerms.get(0),
   );
 };
@@ -73,4 +74,10 @@ export const pushOntoTermHistory = (state, term) => {
 
 export const popTermHistory = (state) => {
   return state.update(TERM_HISTORY, (terms) => (terms || fromJS([])).pop());
+}
+
+export const resetSeenCountsForCategoryTerms = (state, category) => {
+  return state.set(TERMS, state.get(TERMS).map((term) => {
+    return term.set(SEEN_COUNT, 0);
+  }));
 }

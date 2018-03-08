@@ -14,17 +14,19 @@ const intro = keyframes`
 // Export Styled Component
 export default styled.div`
   animation: ${ intro } 2s normal forwards ease-out;
-  animation-delay: 5s;
+  animation-delay: 5.7s;
   bottom: 15%;
   display: inline-block;
-  font-size: 16px;
+  font-size: 12px;
+  font-weight: bold;
   left: 50%;
   opacity: 0;
+  padding: 20px;
   position: absolute;
   transform: translateX(-50%);
 
   a {
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.85);
     padding: 10px;
     text-decoration: none;
   }

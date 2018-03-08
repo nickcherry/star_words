@@ -1,5 +1,10 @@
 // Import Dependencies
-import { POP_TERM_HISTORY, PUSH_ONTO_TERM_HISTORY, INCREMENT_TERM_SEEN_COUNT } from '../constants/actions';
+import {
+  INCREMENT_TERM_SEEN_COUNT,
+  POP_TERM_HISTORY,
+  PUSH_ONTO_TERM_HISTORY,
+  RESET_SEEN_COUNTS_FOR_CATEGORY_TERMS,
+} from '../constants/actions';
 
 // Export Actions
 export const incrementTermSeenCount = (term, amount) => {
@@ -12,4 +17,8 @@ export const popTermHistory = () => {
 
 export const pushOntoTermHistory = (term) => {
   return { type: PUSH_ONTO_TERM_HISTORY, term };
+}
+
+export const resetSeenCountsForCategoryTerms = (category) => {
+  return { type: RESET_SEEN_COUNTS_FOR_CATEGORY_TERMS, category };
 }

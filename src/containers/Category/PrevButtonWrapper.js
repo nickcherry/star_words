@@ -4,5 +4,6 @@ import Button from './Button';
 
 // Export Styled Component
 export default styled(Button)`
-  left: 20%;
+  left: 9px;
+  padding-left: 0;
 `;
