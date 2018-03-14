@@ -7,7 +7,7 @@ export default styled.div`
   position: absolute;
   text-align: center;
   top: 50%;
-  transform: translateY(-65%);
+  transform: translateY(-60%);
   user-select: none;
   width: 100%;
 
@@ -22,7 +22,9 @@ export default styled.div`
     display: block;
     font-size: 18px;
     line-height: 2em;
+    margin: auto;
     opacity: 1;
+    width: 350px;
   }
 }
 `;

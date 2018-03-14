@@ -2,7 +2,7 @@
 import { ANIMALS, COLORS, FOODS, VEHICLES } from './categories';
 
 // Define Max Number of Times Terms Can Be Seen
-export const maxSeenCount = 4;
+export const maxSeenCount = 3;
 
 // Define Terms
 const terms = [
