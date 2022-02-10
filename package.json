@@ -14,7 +14,7 @@
     "hex-to-rgb": "^1.0.1",
     "history": "^4.6.3",
     "immutable": "^3.8.2",
-    "node-sass": "4.3.0",
+    "node-sass": "7.0.0",
     "react": "15.6.1",
     "react-dom": "15.4.2",
     "react-inlinesvg": "^0.8.0",
