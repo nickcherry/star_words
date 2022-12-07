@@ -10,7 +10,7 @@
     "axios": "0.16.2",
     "body-parser": "1.17.2",
     "cors": "2.8.4",
-    "express": "4.15.3",
+    "express": "4.17.3",
     "hex-to-rgb": "^1.0.1",
     "history": "^4.6.3",
     "immutable": "^3.8.2",
